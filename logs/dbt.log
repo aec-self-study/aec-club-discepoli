@@ -26,3 +26,30 @@ Happy modeling!
 
 [0m17:26:43.242061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1334ee5040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1332fdaf40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1332fd39a0>]}
 [0m17:26:43.243587 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2022-10-16 17:34:10.173988 | 4bddd737-6d6c-4a9a-83e8-fecba6e2c2da ==============================
+[0m17:34:10.174001 [info ] [MainThread]: Running with dbt=1.3.0
+[0m17:34:10.174597 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/vscode/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m17:34:10.174924 [debug] [MainThread]: Tracking: tracking
+[0m17:34:10.180448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dd2f65040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dd2f65490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dd2f65100>]}
+[0m17:34:31.805522 [debug] [MainThread]: Starter project path: /usr/local/python/3.9.15/lib/python3.9/site-packages/dbt/include/starter_project
+[0m17:34:58.257749 [info ] [MainThread]: Profile coffee_shop_discepoli written to /home/vscode/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:34:58.258869 [info ] [MainThread]: 
+Your new dbt project "coffee_shop_discepoli" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:34:58.260372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dd2faf7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dd2f65b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9dd2f65490>]}
+[0m17:34:58.261038 [debug] [MainThread]: Flushing usage events
