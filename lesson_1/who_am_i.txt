@@ -1,3 +1,5 @@
 Why am I taking this course?
 
 It's a good question. I've always been interested in the mechanics behind analytics--almost moreso than actual analysis. So, when I heard about analytics engineering it seemed like a great mix of things I'm interested in. I've been slowly picking up some of these skills, but I thought this course would be a great way for me to formalize my training in this area, since one often doesn't know what one doesn't know!
+
+Testing git changes with this update.
