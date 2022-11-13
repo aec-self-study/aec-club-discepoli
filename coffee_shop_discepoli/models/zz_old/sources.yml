@@ -15,5 +15,5 @@ sources:
         columns:
           - name: id
             tests:
-              - unique
+              - uniquedbt
               - not_null
