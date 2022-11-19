@@ -5,21 +5,20 @@
 }}
 
 with customers as (
-  select * from {{ ref(source_coffee_shop__customers) }}
+  select * from {{ ref('src_coffee_shop__customers')}}
 )
 
 , orders as (
-    select * from {{ ref(source_coffee_shop__orders) }}
+    select * from {{ ref('src_coffee_shop__orders')}}
 )
 
 select
-  customers.id as customer_id
-  , customers.name
+  customers.customer_id
+  , customers.customer_name
   , customers.email
-  , min(orders.created_at) as first_order_at
-  , count(distinct orders.id) as num_orders
-  , count(orders.id) as order_distinct_check
+  , min(orders.ordered_at) as first_order_at
+  , count(distinct orders.order_id) as num_orders
 FROM customers
-JOIN orders ON customers.id = orders.customer_id
+JOIN orders ON customers.customer_id = orders.customer_id
 GROUP BY 1,2,3
 ORDER by first_order_at

@@ -4,16 +4,21 @@ with source as (
 
 renamed as (
     select
+        /* Primary Key */
         id as order_id
+
+        /* Foreign Keys */
         , customer_id
+
+        /* Properties */ 
         , total
         , address
         , state
         , zip
-
+        
         /* Timestamps */
-        , created_at
-
+        , created_at as ordered_at
+        
     from source
 )
 
