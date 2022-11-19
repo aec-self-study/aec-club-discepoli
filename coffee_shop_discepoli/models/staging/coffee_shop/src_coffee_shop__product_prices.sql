@@ -13,8 +13,8 @@ renamed as (
         , price
 
         /* Timestamps */
-        , created_at
-        , ended_at
+        , created_at as price_valid_at
+        , ended_at as price_valid_until
         
     from source 
 )

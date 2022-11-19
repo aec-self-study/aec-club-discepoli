@@ -1,0 +1,23 @@
+version: 2
+
+models: 
+  - name: weekly_revenue
+    description: "an aggregated look at revenue that can be sliced by product category and customer type"
+    columns:
+    - name: week
+      description: "Truncated version of ordered timestamp"
+      tests:
+        - not_null
+    - name: product_category
+      description: "The category of the product sold"
+      tests:
+        - relationships:
+            to: ref('src_coffee_shop__products')
+            field: product_category
+    - name: customer_type
+      description: "denotes whether or not a customer has ordered from the shop before"
+      tests:
+      - accepted_values:
+          values: ['new', 'returning']
+    - name: revenue
+      description: a sum of product prices by each measure.

@@ -8,11 +8,11 @@ renamed as (
         id as product_id
 
         /* Properties */ 
-        , name
-        , category
+        , name as product_name
+        , category as product_category
 
         /* Timestamps */
-        , created_at
+        , created_at as product_created_at
         
     from source
 )
