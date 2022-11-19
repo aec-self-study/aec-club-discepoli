@@ -1,6 +1,6 @@
 with known_true as (
     select
-        date_trunc(date(created_at), week) as dimension
+        date_trunc(date(ordered_at), week) as dimension
         , sum(total) as measure
     from dbt_discepoli_coffee_shop.src_coffee_shop__orders
     group by 1
@@ -9,8 +9,9 @@ with known_true as (
 , in_question as (
     select
         week as dimension
-        , revenue as measure
+        , sum(revenue) as measure
     from dbt_discepoli_finance.weekly_revenue
+    group by 1
 )
 
 , test as (
@@ -18,7 +19,7 @@ with known_true as (
         dimension
         , known_true.measure = in_question.measure as passed
     from known_true
-    join in_question using(measure)
+    join in_question using(dimension)
 )
 
 select * from test

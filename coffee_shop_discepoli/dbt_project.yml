@@ -39,6 +39,6 @@ models:
       coffee_shop:
         +schema: coffee_shop
     marts:
-      +materialize: table
+      +materialized: table
       finance:
         +schema: finance
