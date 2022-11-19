@@ -10,10 +10,8 @@ renamed as (
         , address
         , state
         , zip
-
         /* Timestamps */
         , created_at
-
     from source
 )
 
