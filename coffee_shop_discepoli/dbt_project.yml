@@ -34,10 +34,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   coffee_shop_discepoli:
     # Config indicated by + and applies to all files under models/example/
+    intermediate:
+      +materialized: view
+      finance:
+        +schema: finance
     staging:
       +materialized: view
       coffee_shop:
         +schema: coffee_shop
+      web_tracking:
+        +schema: web_tracking
     marts:
       +materialized: table
       finance:

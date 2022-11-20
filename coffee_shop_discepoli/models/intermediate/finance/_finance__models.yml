@@ -1,7 +1,7 @@
 version: 2
 
 models: 
-  - name: src_coffee_shop__customers
+  - name: int_coffee_shop__customer_order_count
     description: Cleand up data for our customers
     columns:
       - name: customer_id
