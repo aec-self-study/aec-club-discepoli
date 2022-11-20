@@ -16,8 +16,8 @@ renamed as (
         , device_type
         
         /* Timestamps */
-        , timestamp as viewed_at
-        
+        , timestamp as page_viewed_at
+    
     from source 
 )
 

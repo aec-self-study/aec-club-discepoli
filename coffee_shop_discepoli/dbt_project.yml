@@ -42,6 +42,8 @@ models:
       +materialized: view
       coffee_shop:
         +schema: coffee_shop
+      web_tracking:
+        +schema: web_tracking
     marts:
       +materialized: table
       finance:
