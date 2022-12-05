@@ -38,6 +38,8 @@ models:
       +materialized: view
       finance:
         +schema: finance
+      web_tracking:
+        +schema: web_tracking
     staging:
       +materialized: view
       coffee_shop:
@@ -48,3 +50,5 @@ models:
       +materialized: table
       finance:
         +schema: finance
+      web_tracking:
+        +schema: web_tracking
