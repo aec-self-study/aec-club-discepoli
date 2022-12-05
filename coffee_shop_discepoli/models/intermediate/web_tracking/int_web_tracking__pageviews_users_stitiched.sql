@@ -26,5 +26,6 @@ select
     , session_metadata.session_ended_at
 
 from original
-left join visitor_ids_per_customer using(customer_id)
 left join session_metadata using(customer_id, session_id)
+left join visitor_ids_per_customer using(customer_id)
+
