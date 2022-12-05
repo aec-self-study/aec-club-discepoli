@@ -1,7 +1,7 @@
 version: 2
 
 models: 
-  - name: int_web_tracking__pageviews_users_stitiched
+  - name: int_web_tracking__pageviews_users_stitched
     description: Replacing the visitor id of logged in users with their first visitor id if known
     columns:
       - name: event_id
@@ -11,6 +11,9 @@ models:
       - name: visitor_id
         tests:
             - not_null
+      - name: session_id
+        tests:
+          - not_null
       - name: device_type
         tests:
             - not_null
