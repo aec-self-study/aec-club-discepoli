@@ -10,10 +10,9 @@ select
   customers.customer_id
   , customers.customer_name
   , customers.email
-  , min(orders.ordered_at
-  ) as first_order_at
+  , min(orders.ordered_at) as first_ordered_at
   , count(distinct orders.order_id) as num_orders
-FROM customers
-JOIN orders ON customers.customer_id = orders.customer_id
-GROUP BY 1,2,3
-ORDER by first_order_at
+from customers
+join orders on customers.customer_id = orders.customer_id
+group by 1,2,3
+order by first_ordered_at

@@ -21,3 +21,25 @@ models:
           values: ['new', 'returning']
     - name: revenue
       description: a sum of product prices by each measure.
+
+  - name: customer_ltv
+    description: "each customers value incremented weekly"
+    columns:
+    - name: primary_key
+      description: "A hashed key built from customer_id and week"
+      tests:
+        - unique
+        - not_null
+    - name: customer_id
+      description: "The unique identifier for each customer"
+      tests:
+        - not_null
+    - name: week
+      description: "The week number of a customer's lifetime with our company"
+      tests:
+        - not_null
+    - name: revenue
+      description: "A sum of all the prices for the products purchased by a given customer in a given week"
+    - name: cumulative_revenue
+      description: "A cumulative sum of purchases since the customers lifetime began."
+    
