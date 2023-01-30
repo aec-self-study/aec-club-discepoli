@@ -52,3 +52,9 @@ models:
         +schema: finance
       web_tracking:
         +schema: web_tracking
+  
+vars:
+  github__using_repo_team: false
+  github_source:
+    github_database: analytics-engineers-club
+    github_schema: github

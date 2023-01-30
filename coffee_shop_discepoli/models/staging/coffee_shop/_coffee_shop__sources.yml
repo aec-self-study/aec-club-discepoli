@@ -40,3 +40,6 @@ sources:
               tests:
                 - unique
                 - not_null
+            - name: price
+              tests:
+                - greater_than_zero
