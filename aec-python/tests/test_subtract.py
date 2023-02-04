@@ -14,8 +14,8 @@ class TestSubtract(unittest.TestCase):
 
     def test_just_use_two(self):
         args_ints = [5, 20, 1]
-        sub_result = aec_subtract(args_ints)
-        self.assertRaises(sub_result, "Sorry, use only 2 numbers")
+        with self.assertRaisesRegex(Exception, 'Sorry, use only 2 numbers') as context:
+            aec_subtract(args_ints)
 
 if __name__ == "__main__":
     unittest.main()

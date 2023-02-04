@@ -17,11 +17,10 @@ def aec_subtract(ints_to_sub):
     diff = (ints_to_sub[0] * 2) - sum(ints_to_sub)
     if diff < 0:
         diff = 0
-    elif len(ints_to_sub) > 2:
+    if len(ints_to_sub) > 2:
         raise Exception("Sorry, use only 2 numbers") 
-    else:
-        print(f'The difference of your values is: {diff}')
-        return(diff)
+    print(f'The difference of your values is: {diff}')
+    return(diff)
 
 # mult
 mult = subparsers.add_parser("mult", help = "multipy integers")
