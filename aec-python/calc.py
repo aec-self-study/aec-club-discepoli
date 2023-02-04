@@ -15,8 +15,13 @@ sub.add_argument("ints_to_sub", nargs = '*', type=int)
 
 def aec_subtract(ints_to_sub):
     diff = (ints_to_sub[0] * 2) - sum(ints_to_sub)
-    print(f'The difference of your values is: {diff}')
-    return(diff)
+    if diff < 0:
+        diff = 0
+    elif len(ints_to_sub) > 2:
+        raise Exception("Sorry, use only 2 numbers") 
+    else:
+        print(f'The difference of your values is: {diff}')
+        return(diff)
 
 # mult
 mult = subparsers.add_parser("mult", help = "multipy integers")
@@ -36,10 +41,9 @@ def aec_divide(ints_to_div):
 
     if result == "Oops":
         print("Oops, you can\'t divide by 0, silly")
-        return(result)
     else:
         print(f'The divided result of your values is: {result}')
-        return(result)
+    return(result)
 
 # output
 if __name__ == "__main__":
